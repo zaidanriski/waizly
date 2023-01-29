@@ -1,0 +1,1215 @@
+{
+	"info": {
+		"_postman_id": "5c759469-ba51-4fa1-a0a9-9b49d4a0f565",
+		"name": "Waizly",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "List Karyawan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRlMDQ3ZTdhODAzNjJhYzA3YTAzZTgyYTg0YmI0NDMyNzZmNzQzMzEwMjU3Yjg4ZGY0N2E3N2ZjNTZjNDJhNjE3YTRhZTkyMTI4Y2VhNjYiLCJpYXQiOjE2NzUwMTYyODMuOTY1MjAyLCJuYmYiOjE2NzUwMTYyODMuOTY1MjExLCJleHAiOjE3MDY1NTIyODMuOTU1MjIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kX5CmJcHaNbAT1J1D_sVawSETRr0Wqt2jTBlCQTJ64KJHwsqQbl6p6v9rxG2Vo7v9CqwARECpS9cGrFmGw4hZGWpuzzq01bSdmKTniSekjWzZM2mM35S6r-8cjrxm8ramNLYz8ylL7Mu7nvbyEmJdah52Czx7eefD_FtJU7f4LuTLq5hhC_eEpBEsQ_6zbhpaZPSlibNdNGycWEqrw8yrNrRYM0UJ2PIBa1iH7XJeUviYM77F7afN6M6Z8oHr6L4Qy58Ia9RUO5iTIzXMxQhCCJ9vzIF2mjePRuObu31DMPQ0iZoFNxAfk4lvIBKyXLL3WFN_N012HQSkRJNRtNx8M6cQ768NcQ50GTDNoKUs5FkSgamfKZ8f9l5XffzNPRClxQBdDepEE8oYCIxL0k7Y-AR6Qy7u7fo8K33dcHm7iRASUf9ceevd59JAq6J5SYm1sAQKsmXEoU_xfdyYOWykWe3GdMAHDTiAwyLY3iF1Ye6CcBTDHt4CprGwYd_O9CJse4sdIVJinKNgroMjRwlUMCZM96g_NUKnHWWii5Rg9ZcjaaHN56sxsCeA-Q-5Gt2H21cmW7ZTkmKDgRzcZShJnwn-WtUJFQs5_OZH25UU7-xa9cN-io6BnjfJRDBBLQ8LhL7-keYYMzVKjin8SGRKDe2rAiMemIs83wmFn0HCHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"karyawan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Karyawan",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/karyawan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"karyawan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:22:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nama\": \"Zaidan\",\n            \"tanggal_lahir\": \"1999-10-21\",\n            \"gaji\": 5000000,\n            \"status_karyawan\": 1\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Tambah Karyawan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRlMDQ3ZTdhODAzNjJhYzA3YTAzZTgyYTg0YmI0NDMyNzZmNzQzMzEwMjU3Yjg4ZGY0N2E3N2ZjNTZjNDJhNjE3YTRhZTkyMTI4Y2VhNjYiLCJpYXQiOjE2NzUwMTYyODMuOTY1MjAyLCJuYmYiOjE2NzUwMTYyODMuOTY1MjExLCJleHAiOjE3MDY1NTIyODMuOTU1MjIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kX5CmJcHaNbAT1J1D_sVawSETRr0Wqt2jTBlCQTJ64KJHwsqQbl6p6v9rxG2Vo7v9CqwARECpS9cGrFmGw4hZGWpuzzq01bSdmKTniSekjWzZM2mM35S6r-8cjrxm8ramNLYz8ylL7Mu7nvbyEmJdah52Czx7eefD_FtJU7f4LuTLq5hhC_eEpBEsQ_6zbhpaZPSlibNdNGycWEqrw8yrNrRYM0UJ2PIBa1iH7XJeUviYM77F7afN6M6Z8oHr6L4Qy58Ia9RUO5iTIzXMxQhCCJ9vzIF2mjePRuObu31DMPQ0iZoFNxAfk4lvIBKyXLL3WFN_N012HQSkRJNRtNx8M6cQ768NcQ50GTDNoKUs5FkSgamfKZ8f9l5XffzNPRClxQBdDepEE8oYCIxL0k7Y-AR6Qy7u7fo8K33dcHm7iRASUf9ceevd59JAq6J5SYm1sAQKsmXEoU_xfdyYOWykWe3GdMAHDTiAwyLY3iF1Ye6CcBTDHt4CprGwYd_O9CJse4sdIVJinKNgroMjRwlUMCZM96g_NUKnHWWii5Rg9ZcjaaHN56sxsCeA-Q-5Gt2H21cmW7ZTkmKDgRzcZShJnwn-WtUJFQs5_OZH25UU7-xa9cN-io6BnjfJRDBBLQ8LhL7-keYYMzVKjin8SGRKDe2rAiMemIs83wmFn0HCHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Zaidan",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "1999-10-21",
+									"type": "text"
+								},
+								{
+									"key": "gaji",
+									"value": "5000000",
+									"type": "text"
+								},
+								{
+									"key": "status_karyawan",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/karyawan",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"karyawan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Tambah Karyawan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nama",
+											"value": "Zaidan",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_lahir",
+											"value": "1999-10-21",
+											"type": "text"
+										},
+										{
+											"key": "gaji",
+											"value": "5000000",
+											"type": "text"
+										},
+										{
+											"key": "status_karyawan",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/karyawan",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"karyawan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:22:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Simpan Data Karyawan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Karyawan Detail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRlMDQ3ZTdhODAzNjJhYzA3YTAzZTgyYTg0YmI0NDMyNzZmNzQzMzEwMjU3Yjg4ZGY0N2E3N2ZjNTZjNDJhNjE3YTRhZTkyMTI4Y2VhNjYiLCJpYXQiOjE2NzUwMTYyODMuOTY1MjAyLCJuYmYiOjE2NzUwMTYyODMuOTY1MjExLCJleHAiOjE3MDY1NTIyODMuOTU1MjIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kX5CmJcHaNbAT1J1D_sVawSETRr0Wqt2jTBlCQTJ64KJHwsqQbl6p6v9rxG2Vo7v9CqwARECpS9cGrFmGw4hZGWpuzzq01bSdmKTniSekjWzZM2mM35S6r-8cjrxm8ramNLYz8ylL7Mu7nvbyEmJdah52Czx7eefD_FtJU7f4LuTLq5hhC_eEpBEsQ_6zbhpaZPSlibNdNGycWEqrw8yrNrRYM0UJ2PIBa1iH7XJeUviYM77F7afN6M6Z8oHr6L4Qy58Ia9RUO5iTIzXMxQhCCJ9vzIF2mjePRuObu31DMPQ0iZoFNxAfk4lvIBKyXLL3WFN_N012HQSkRJNRtNx8M6cQ768NcQ50GTDNoKUs5FkSgamfKZ8f9l5XffzNPRClxQBdDepEE8oYCIxL0k7Y-AR6Qy7u7fo8K33dcHm7iRASUf9ceevd59JAq6J5SYm1sAQKsmXEoU_xfdyYOWykWe3GdMAHDTiAwyLY3iF1Ye6CcBTDHt4CprGwYd_O9CJse4sdIVJinKNgroMjRwlUMCZM96g_NUKnHWWii5Rg9ZcjaaHN56sxsCeA-Q-5Gt2H21cmW7ZTkmKDgRzcZShJnwn-WtUJFQs5_OZH25UU7-xa9cN-io6BnjfJRDBBLQ8LhL7-keYYMzVKjin8SGRKDe2rAiMemIs83wmFn0HCHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/karyawan/1/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"karyawan",
+								"1",
+								"edit"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Karyawan Detail",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/karyawan/1/edit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"karyawan",
+										"1",
+										"edit"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:22:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 1,\n        \"nama\": \"Zaidan\",\n        \"tanggal_lahir\": \"1999-10-21\",\n        \"gaji\": 5000000,\n        \"status_karyawan\": 1\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Karyawan",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRlMDQ3ZTdhODAzNjJhYzA3YTAzZTgyYTg0YmI0NDMyNzZmNzQzMzEwMjU3Yjg4ZGY0N2E3N2ZjNTZjNDJhNjE3YTRhZTkyMTI4Y2VhNjYiLCJpYXQiOjE2NzUwMTYyODMuOTY1MjAyLCJuYmYiOjE2NzUwMTYyODMuOTY1MjExLCJleHAiOjE3MDY1NTIyODMuOTU1MjIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kX5CmJcHaNbAT1J1D_sVawSETRr0Wqt2jTBlCQTJ64KJHwsqQbl6p6v9rxG2Vo7v9CqwARECpS9cGrFmGw4hZGWpuzzq01bSdmKTniSekjWzZM2mM35S6r-8cjrxm8ramNLYz8ylL7Mu7nvbyEmJdah52Czx7eefD_FtJU7f4LuTLq5hhC_eEpBEsQ_6zbhpaZPSlibNdNGycWEqrw8yrNrRYM0UJ2PIBa1iH7XJeUviYM77F7afN6M6Z8oHr6L4Qy58Ia9RUO5iTIzXMxQhCCJ9vzIF2mjePRuObu31DMPQ0iZoFNxAfk4lvIBKyXLL3WFN_N012HQSkRJNRtNx8M6cQ768NcQ50GTDNoKUs5FkSgamfKZ8f9l5XffzNPRClxQBdDepEE8oYCIxL0k7Y-AR6Qy7u7fo8K33dcHm7iRASUf9ceevd59JAq6J5SYm1sAQKsmXEoU_xfdyYOWykWe3GdMAHDTiAwyLY3iF1Ye6CcBTDHt4CprGwYd_O9CJse4sdIVJinKNgroMjRwlUMCZM96g_NUKnHWWii5Rg9ZcjaaHN56sxsCeA-Q-5Gt2H21cmW7ZTkmKDgRzcZShJnwn-WtUJFQs5_OZH25UU7-xa9cN-io6BnjfJRDBBLQ8LhL7-keYYMzVKjin8SGRKDe2rAiMemIs83wmFn0HCHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nama",
+									"value": "Zaidan Riski",
+									"type": "text"
+								},
+								{
+									"key": "tanggal_lahir",
+									"value": "1999-10-21",
+									"type": "text"
+								},
+								{
+									"key": "gaji",
+									"value": "6200000",
+									"type": "text"
+								},
+								{
+									"key": "status_karyawan",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "_method",
+									"value": "PUT",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/karyawan/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"karyawan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Karyawan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "nama",
+											"value": "Zaidan Riski",
+											"type": "text"
+										},
+										{
+											"key": "tanggal_lahir",
+											"value": "1999-10-21",
+											"type": "text"
+										},
+										{
+											"key": "gaji",
+											"value": "6200000",
+											"type": "text"
+										},
+										{
+											"key": "status_karyawan",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "_method",
+											"value": "PUT",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/karyawan/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"karyawan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:23:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Update Data Karyawan\"\n}"
+						}
+					]
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmRlMDQ3ZTdhODAzNjJhYzA3YTAzZTgyYTg0YmI0NDMyNzZmNzQzMzEwMjU3Yjg4ZGY0N2E3N2ZjNTZjNDJhNjE3YTRhZTkyMTI4Y2VhNjYiLCJpYXQiOjE2NzUwMTYyODMuOTY1MjAyLCJuYmYiOjE2NzUwMTYyODMuOTY1MjExLCJleHAiOjE3MDY1NTIyODMuOTU1MjIxLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.kX5CmJcHaNbAT1J1D_sVawSETRr0Wqt2jTBlCQTJ64KJHwsqQbl6p6v9rxG2Vo7v9CqwARECpS9cGrFmGw4hZGWpuzzq01bSdmKTniSekjWzZM2mM35S6r-8cjrxm8ramNLYz8ylL7Mu7nvbyEmJdah52Czx7eefD_FtJU7f4LuTLq5hhC_eEpBEsQ_6zbhpaZPSlibNdNGycWEqrw8yrNrRYM0UJ2PIBa1iH7XJeUviYM77F7afN6M6Z8oHr6L4Qy58Ia9RUO5iTIzXMxQhCCJ9vzIF2mjePRuObu31DMPQ0iZoFNxAfk4lvIBKyXLL3WFN_N012HQSkRJNRtNx8M6cQ768NcQ50GTDNoKUs5FkSgamfKZ8f9l5XffzNPRClxQBdDepEE8oYCIxL0k7Y-AR6Qy7u7fo8K33dcHm7iRASUf9ceevd59JAq6J5SYm1sAQKsmXEoU_xfdyYOWykWe3GdMAHDTiAwyLY3iF1Ye6CcBTDHt4CprGwYd_O9CJse4sdIVJinKNgroMjRwlUMCZM96g_NUKnHWWii5Rg9ZcjaaHN56sxsCeA-Q-5Gt2H21cmW7ZTkmKDgRzcZShJnwn-WtUJFQs5_OZH25UU7-xa9cN-io6BnjfJRDBBLQ8LhL7-keYYMzVKjin8SGRKDe2rAiMemIs83wmFn0HCHM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/karyawan/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"karyawan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/karyawan/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"karyawan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:24:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"success\": true,\n    \"message\": \"Berhasil Hapus Data Karyawan\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Zaidan Riski",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "zdnrsk@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								},
+								{
+									"key": "password_confirmation",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/auth/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Zaidan Riski",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "zdnrsk@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										},
+										{
+											"key": "password_confirmation",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/auth/signup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"auth",
+										"signup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:10:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully created user!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "zdnrsk@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12345678",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "zdnrsk@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12345678",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:12:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "57"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access_token\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmE0NDA5OWJhM2IwYjg1MDc2MjBmOTUyMzgxMjMwZGNiOGJmYzQ3ZWI4MjVkNTk5YTg3M2UxNmM4MGVlNmM1OTM4YTI0YzMxMjllYjkyZjIiLCJpYXQiOjE2NzUwMTU5NTcuMDgxNTYzLCJuYmYiOjE2NzUwMTU5NTcuMDgxNTczLCJleHAiOjE3MDY1NTE5NTcuMDU4NzI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hnncatXSe6lfiEb82eYmmDAg78jBmKe5741VSBnlMPZwQng8K_cUygTImuPU2OwecLdJrkX9iYZjA68FwYVybnZ-Qn5rLQo4RwqcAijYSZ-3Ezd9w-385-bFE8d6yl-mKKsTRMyQbQSWUrgsVuHmXL96Ri9mT1Fxca-XI0X8YJDV8G0mL6R5XGpxSkXDbZSYhnu5-W7BQZr54WW_jZqRejdMpm23q6CG8Ua8uPKx4DmORsch6p6GkQQn_cU40MnzqqWQFOZViK5bQYFbVVgh8_O1bK-8bnlKH_CHJGJUEee4SaQvRWGQf5dfjQ7hDz9ybX2-G_a7UFz8e7GRBkJBbBLINTNlXV0FAzOAYmFX_kAlsqkuzSbJ3gmjn4iqforiNUts_dDt8NnEQycYj2BdSr6sO5PZS0-u3CSZIgdgvApgi3Gd0YjkalYiUhuEl2LpFK66yIg-W9Yzkk_YHn4cMdu31_ei9EuHVr-v1-7CsfE3dK1_MXQdGAVVNq2lwmeMXrdOgu9WEdbkYjl0-6Bsg0qSwIvho8gFajNpE1cqrgN0v7SDxMw7O5RV6oq3qkzLO_Zwvm12BfWyGydpFaY_DUwcXnuZ1V3GOeZr8GAqwGoVOfZiP-pJXsfzD7AY3QWNAOdw-6LrfkldQ3384U3zb55RmgRqd51Hs8ZGdRhN6SE\",\n    \"token_type\": \"Bearer\",\n    \"expires_at\": \"2024-01-29 18:12:37\"\n}"
+						}
+					]
+				},
+				{
+					"name": "get user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmE0NDA5OWJhM2IwYjg1MDc2MjBmOTUyMzgxMjMwZGNiOGJmYzQ3ZWI4MjVkNTk5YTg3M2UxNmM4MGVlNmM1OTM4YTI0YzMxMjllYjkyZjIiLCJpYXQiOjE2NzUwMTU5NTcuMDgxNTYzLCJuYmYiOjE2NzUwMTU5NTcuMDgxNTczLCJleHAiOjE3MDY1NTE5NTcuMDU4NzI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hnncatXSe6lfiEb82eYmmDAg78jBmKe5741VSBnlMPZwQng8K_cUygTImuPU2OwecLdJrkX9iYZjA68FwYVybnZ-Qn5rLQo4RwqcAijYSZ-3Ezd9w-385-bFE8d6yl-mKKsTRMyQbQSWUrgsVuHmXL96Ri9mT1Fxca-XI0X8YJDV8G0mL6R5XGpxSkXDbZSYhnu5-W7BQZr54WW_jZqRejdMpm23q6CG8Ua8uPKx4DmORsch6p6GkQQn_cU40MnzqqWQFOZViK5bQYFbVVgh8_O1bK-8bnlKH_CHJGJUEee4SaQvRWGQf5dfjQ7hDz9ybX2-G_a7UFz8e7GRBkJBbBLINTNlXV0FAzOAYmFX_kAlsqkuzSbJ3gmjn4iqforiNUts_dDt8NnEQycYj2BdSr6sO5PZS0-u3CSZIgdgvApgi3Gd0YjkalYiUhuEl2LpFK66yIg-W9Yzkk_YHn4cMdu31_ei9EuHVr-v1-7CsfE3dK1_MXQdGAVVNq2lwmeMXrdOgu9WEdbkYjl0-6Bsg0qSwIvho8gFajNpE1cqrgN0v7SDxMw7O5RV6oq3qkzLO_Zwvm12BfWyGydpFaY_DUwcXnuZ1V3GOeZr8GAqwGoVOfZiP-pJXsfzD7AY3QWNAOdw-6LrfkldQ3384U3zb55RmgRqd51Hs8ZGdRhN6SE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/auth/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"auth",
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get user",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/auth/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"auth",
+										"user"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:18:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "59"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"name\": \"Zaidan Riski\",\n    \"email\": \"zdnrsk@gmail.com\",\n    \"email_verified_at\": null,\n    \"created_at\": \"2023-01-29T18:10:14.000000Z\",\n    \"updated_at\": \"2023-01-29T18:10:14.000000Z\"\n}"
+						}
+					]
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmE0NDA5OWJhM2IwYjg1MDc2MjBmOTUyMzgxMjMwZGNiOGJmYzQ3ZWI4MjVkNTk5YTg3M2UxNmM4MGVlNmM1OTM4YTI0YzMxMjllYjkyZjIiLCJpYXQiOjE2NzUwMTU5NTcuMDgxNTYzLCJuYmYiOjE2NzUwMTU5NTcuMDgxNTczLCJleHAiOjE3MDY1NTE5NTcuMDU4NzI3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.hnncatXSe6lfiEb82eYmmDAg78jBmKe5741VSBnlMPZwQng8K_cUygTImuPU2OwecLdJrkX9iYZjA68FwYVybnZ-Qn5rLQo4RwqcAijYSZ-3Ezd9w-385-bFE8d6yl-mKKsTRMyQbQSWUrgsVuHmXL96Ri9mT1Fxca-XI0X8YJDV8G0mL6R5XGpxSkXDbZSYhnu5-W7BQZr54WW_jZqRejdMpm23q6CG8Ua8uPKx4DmORsch6p6GkQQn_cU40MnzqqWQFOZViK5bQYFbVVgh8_O1bK-8bnlKH_CHJGJUEee4SaQvRWGQf5dfjQ7hDz9ybX2-G_a7UFz8e7GRBkJBbBLINTNlXV0FAzOAYmFX_kAlsqkuzSbJ3gmjn4iqforiNUts_dDt8NnEQycYj2BdSr6sO5PZS0-u3CSZIgdgvApgi3Gd0YjkalYiUhuEl2LpFK66yIg-W9Yzkk_YHn4cMdu31_ei9EuHVr-v1-7CsfE3dK1_MXQdGAVVNq2lwmeMXrdOgu9WEdbkYjl0-6Bsg0qSwIvho8gFajNpE1cqrgN0v7SDxMw7O5RV6oq3qkzLO_Zwvm12BfWyGydpFaY_DUwcXnuZ1V3GOeZr8GAqwGoVOfZiP-pJXsfzD7AY3QWNAOdw-6LrfkldQ3384U3zb55RmgRqd51Hs8ZGdRhN6SE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/waizly/api-crud/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"waizly",
+								"api-crud",
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "logout",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost/waizly/api-crud/api/auth/logout",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"path": [
+										"waizly",
+										"api-crud",
+										"api",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sun, 29 Jan 2023 18:14:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.41 (Ubuntu)"
+								},
+								{
+									"key": "Vary",
+									"value": "Authorization"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "X-RateLimit-Limit",
+									"value": "60"
+								},
+								{
+									"key": "X-RateLimit-Remaining",
+									"value": "58"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
